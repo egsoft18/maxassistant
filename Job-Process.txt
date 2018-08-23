@@ -1,0 +1,88 @@
+USE [GENSHOES]
+GO
+
+/****** Object:  Table [dbo].[Job_Progress]    Script Date: 3/1/2018 5:57:26 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Job_Progress](
+	[ORDNUM_14] [char](12) NOT NULL,
+	[OPRSEQ_14] [char](4) NOT NULL,
+	[PRTNUM_14] [char](30) NOT NULL,
+	[WRKCTR_14] [char](5) NOT NULL,
+	[OPRID_14] [char](4) NOT NULL,
+	[OPRDES_14] [char](25) NOT NULL,
+	[RUNTIM_14] [float] NOT NULL,
+	[SETTIM_14] [float] NOT NULL,
+	[QTYCOM_14] [float] NOT NULL,
+	[QTYREM_14] [float] NOT NULL,
+	[ASCRAP_14] [float] NOT NULL,
+	[RUNACT_14] [float] NOT NULL,
+	[SETSCH_14] [float] NOT NULL,
+	[SETACT_14] [float] NOT NULL,
+	[RLSDTE_14] [smalldatetime] NULL,
+	[FILL01_14] [char](2) NULL,
+	[MOVDTE_14] [smalldatetime] NULL,
+	[FILL02_14] [char](2) NULL,
+	[ORGSRT_14] [smalldatetime] NULL,
+	[FILL03_14] [char](2) NULL,
+	[CURSRT_14] [smalldatetime] NULL,
+	[FILL04_14] [char](2) NULL,
+	[ORGCOM_14] [smalldatetime] NULL,
+	[FILL05_14] [char](2) NULL,
+	[CURCOM_14] [smalldatetime] NULL,
+	[FILL06_14] [char](2) NULL,
+	[HLDCDE_14] [char](1) NOT NULL,
+	[QUECDE_14] [char](1) NOT NULL,
+	[LDTREM_14] [smallint] NOT NULL,
+	[OPRTYP_14] [char](1) NOT NULL,
+	[STDTYP_14] [char](1) NOT NULL,
+	[QTYPER_14] [float] NOT NULL,
+	[TOOL_14] [char](30) NOT NULL,
+	[SUBCST_14] [float] NOT NULL,
+	[REVDTE_14] [smalldatetime] NULL,
+	[FILL07_14] [char](2) NULL,
+	[PSCRAP_14] [float] NOT NULL,
+	[SETEXT_14] [char](1) NOT NULL,
+	[SETINC_14] [char](1) NOT NULL,
+	[MOVDAY_14] [smallint] NOT NULL,
+	[OVENDR_14] [char](1) NOT NULL,
+	[MCOMP_14] [char](3) NOT NULL,
+	[MSITE_14] [char](3) NOT NULL,
+	[UDFKEY_14] [char](15) NOT NULL,
+	[UDFREF_14] [char](25) NOT NULL,
+	[DEXPFLG_14] [char](1) NOT NULL,
+	[TSFRQTY_14] [float] NOT NULL,
+	[SERVICEID_14] [char](10) NOT NULL,
+	[VONUMBER_14] [char](12) NOT NULL,
+	[PRIVENID_14] [char](20) NOT NULL,
+	[RTGGRP_14] [char](5) NOT NULL,
+	[XDFINT_14] [int] NULL,
+	[XDFFLT_14] [float] NULL,
+	[XDFBOL_14] [char](1) NULL,
+	[XDFDTE_14] [smalldatetime] NULL,
+	[XDFTXT_14] [char](100) NULL,
+	[FILLER_14] [char](50) NULL,
+	[CreatedBy] [varchar](100) NULL,
+	[CreationDate] [datetime] NULL CONSTRAINT [DF__Job_Progr__Creat__3DB3258D]  DEFAULT (getdate()),
+	[ModifiedBy] [varchar](100) NULL,
+	[ModificationDate] [datetime] NULL CONSTRAINT [DF__Job_Progr__Modif__3EA749C6]  DEFAULT (getdate()),
+ CONSTRAINT [PK_Job_Progress] PRIMARY KEY CLUSTERED 
+(
+	[ORDNUM_14] ASC,
+	[OPRSEQ_14] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
