@@ -94,9 +94,15 @@ namespace Max_Assistant
             frm.Show();
         }
 
-        private void entradaAAlmacenToolStripMenuItem_Click(object sender, EventArgs e)
+        public void entradaAAlmacenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //entryhw frm = new entryhw();
+            //frm.MdiParent = this;
+            //frm.Show();
+            wh();
+        }
+        public void wh()
+        {
             entryhw frm = new entryhw();
             frm.MdiParent = this;
             frm.Show();

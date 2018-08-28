@@ -112,7 +112,6 @@ namespace Max_Assistant
                 {
                     MessageBox.Show("Se ha realizado la accion", "Hecho");
                     valor = "si";
-
                 }
             }
             catch (Exception ex)
@@ -180,13 +179,11 @@ namespace Max_Assistant
         {
             try
             {
-
                 SqlCommand insertion = new SqlCommand(query, cnx);
 
                 if (insertion.ExecuteNonQuery() > 0)
                 {
                     valor = "si";
-
                 }
             }
             catch (Exception ex)

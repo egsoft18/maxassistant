@@ -25,8 +25,6 @@ namespace Max_Assistant
 
         private void entryhw_Activated(object sender, EventArgs e)
         {
-            //string query = "select * from Order_Master where PRTNUM_10 like '"+txtpartid.Text+"%' and STATUS_10 = '3' and DUEQTY_10 > 1 and UDFKEY_10 = '' and ORDNUM_10 like '5 % '";
-            //c.load_dgv(dataGridView1, query);
 
         }
 
@@ -56,14 +54,20 @@ namespace Max_Assistant
                 c.fill_txt(txtpo, query2, "UDFREF_10");
 
                 MessageBox.Show("El PO de la caja es el siguiente" +txtpo.Text+ ". Por favor coloquelo en el lugar adecuado.", "Caja aceptada");
+                
                 c.valor = "";
+                txtupc.Clear();
+                txtpartid.Clear();
+                entryhw frm = new entryhw();
+                frm.MdiParent = this.MdiParent;
+                frm.Show();
+
+                this.Close();
+                //DataTable dt = (DataTable)dataGridView1.DataSource;
+                //dt.Clear();
+                //entryhw_Load("",e);
             }
 
-
-            //string tablename = "Ticket";
-            //string xml = "Ticket.xml";
-            //string report = "Ticket.rpt";
-            //c.test_printreport(query, tablename, xml, report);
 
         }
     }

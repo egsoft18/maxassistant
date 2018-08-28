@@ -86,7 +86,7 @@
             // 
             // data_dtp
             // 
-            this.data_dtp.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            this.data_dtp.CustomFormat = "yyyy-MM-dd";
             this.data_dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.data_dtp.Location = new System.Drawing.Point(593, 37);
             this.data_dtp.Name = "data_dtp";
@@ -128,6 +128,8 @@
             this.position_cb.Name = "position_cb";
             this.position_cb.Size = new System.Drawing.Size(254, 21);
             this.position_cb.TabIndex = 0;
+            this.position_cb.SelectedIndexChanged += new System.EventHandler(this.position_cb_SelectedIndexChanged);
+            this.position_cb.SelectedValueChanged += new System.EventHandler(this.position_cb_SelectedValueChanged);
             // 
             // postoperation
             // 

@@ -126,6 +126,7 @@
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.Name = "entryhw";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entrada a almacen";
             this.Activated += new System.EventHandler(this.entryhw_Activated);
             this.Load += new System.EventHandler(this.entryhw_Load);

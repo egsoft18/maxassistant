@@ -272,9 +272,21 @@ namespace Max_Assistant
         private void postoperation_Activated(object sender, EventArgs e)
         {
             //dateTimePicker1.CustomFormat = "dd/MM/yyyy hh:mm:ss";
-            data_dtp.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            data_dtp.CustomFormat = "MM-dd-yyyy";
             data_dtp.Format = DateTimePickerFormat.Custom;
             data_dtp.Value = DateTime.Now;
+        }
+
+        private void position_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            code_txt.SelectionStart = 0;
+            code_txt.SelectionLength = code_txt.Text.Length;
+        }
+
+        private void position_cb_SelectedValueChanged(object sender, EventArgs e)
+        {
+            code_txt.Focus();
+            code_txt.SelectionStart = 0;
         }
     }
 }
