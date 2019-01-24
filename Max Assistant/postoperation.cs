@@ -266,7 +266,8 @@ namespace Max_Assistant
 
         private void postoperation_Load(object sender, EventArgs e)
         {
-
+            gbpost.Show();
+            gb0.Hide();
         }
 
         private void postoperation_Activated(object sender, EventArgs e)
@@ -287,6 +288,37 @@ namespace Max_Assistant
         {
             code_txt.Focus();
             code_txt.SelectionStart = 0;
+        }
+
+        private void postOperationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gbpost.Show();
+            gb0.Hide();
+        }
+
+        private void lecturaCeroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gbpost.Hide();
+            gb0.Show();
+        }
+
+        private void txtcodezero_KeyDown(object sender, KeyEventArgs e)
+        {
+            string code = code_txt.Text + "0000";
+            string query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '6', MOVDTE_14 = '' where WRKCTR_14 = 'PLAN' and ORDNUM_14 = '" + code + "'";
+            c.command3(query);
+            query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '0', MOVDTE_14 = '' where WRKCTR_14 = 'BCDP' and ORDNUM_14 = '" + code + "'";
+            c.command3(query);
+            query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '0', MOVDTE_14 = '' where WRKCTR_14 = 'CG2' and ORDNUM_14 = '" + code + "'";
+            c.command3(query);
+            query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '0', MOVDTE_14 = '' where WRKCTR_14 = '1CTB' and ORDNUM_14 = '" + code + "'";
+            c.command3(query);
+            query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '0', MOVDTE_14 = '' where WRKCTR_14 = 'INPS' and ORDNUM_14 = '" + code + "'";
+            c.command3(query);
+            query = "update Job_Progress set QTYCOM_14 = '0', QTYREM_14 = '0', MOVDTE_14 = '' where WRKCTR_14 = 'PACK1' and ORDNUM_14 = '" + code + "'";
+            query = "select ORDNUM_14 as 'Codigo',OPRDES_14 as 'Posicion' ,PRTNUM_14 as 'PartID',QTYCOM_14 as 'QTY Com' ,QTYREM_14 as 'QTY Due', MOVDTE_14 as 'Fecha Lectura' from GENSHOES.dbo.Job_Progress where ordnum_14 = '" + code + "'";
+            c.load_dgv(dataGridView2, query);
+            query = "";
         }
     }
 }

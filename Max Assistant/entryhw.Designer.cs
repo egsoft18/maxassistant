@@ -86,6 +86,7 @@
             // 
             // txtpartid
             // 
+            this.txtpartid.Enabled = false;
             this.txtpartid.Location = new System.Drawing.Point(288, 37);
             this.txtpartid.Name = "txtpartid";
             this.txtpartid.Size = new System.Drawing.Size(257, 20);
